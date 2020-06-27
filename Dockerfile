@@ -4,4 +4,4 @@ RUN mkdir /app
 ADD . /app
 WORKDIR /app
 RUN go build -o main .
-CMD ["/app/main"]
+CMD ["/app/main", "--worker_count", "10"]
